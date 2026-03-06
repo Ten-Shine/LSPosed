@@ -9,6 +9,7 @@ android {
     androidResources { enable = false }
 
     defaultConfig {
+        consumerProguardFiles("proguard-rules.pro")
         buildConfigField("String", "FRAMEWORK_NAME", """"${rootProject.name}"""")
         buildConfigField("String", "VERSION_NAME", """"${versionCodeProvider.get()}"""")
         buildConfigField("long", "VERSION_CODE", versionCodeProvider.get())
