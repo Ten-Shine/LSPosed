@@ -116,6 +116,8 @@ public class LSPNotificationManager {
                 context.getString(R.string.module_updated_channel_name),
                 NotificationManager.IMPORTANCE_HIGH);
         updated.setShowBadge(false);
+        updated.setSound(null, null);
+        updated.enableVibration(false);
         if (hasNotificationChannelForSystem(nm, UPDATED_CHANNEL_ID)) {
             Log.d(TAG, "update notification channel: " + UPDATED_CHANNEL_ID);
             nm.updateNotificationChannelForPackage("android", 1000, updated);
@@ -127,6 +129,8 @@ public class LSPNotificationManager {
                 context.getString(R.string.status_channel_name),
                 NotificationManager.IMPORTANCE_MIN);
         status.setShowBadge(false);
+        status.setSound(null, null);
+        status.enableVibration(false);
         if (hasNotificationChannelForSystem(nm, STATUS_CHANNEL_ID)) {
             Log.d(TAG, "update notification channel: " + STATUS_CHANNEL_ID);
             nm.updateNotificationChannelForPackage("android", 1000, status);
@@ -138,6 +142,8 @@ public class LSPNotificationManager {
                 context.getString(R.string.scope_channel_name),
                 NotificationManager.IMPORTANCE_HIGH);
         scope.setShowBadge(false);
+        scope.setSound(null, null);
+        scope.enableVibration(false);
         if (hasNotificationChannelForSystem(nm, SCOPE_CHANNEL_ID)) {
             Log.d(TAG, "update notification channel: " + SCOPE_CHANNEL_ID);
             nm.updateNotificationChannelForPackage("android", 1000, scope);
